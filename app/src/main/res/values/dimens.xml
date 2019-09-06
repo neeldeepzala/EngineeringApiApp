@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padd_4dp">4dp</dimen>
+    <dimen name="padd_2dp">2dp</dimen>
+    <dimen name="padd_60dp">60dp</dimen>
+    <dimen name="padd_8dp">8dp</dimen>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EngineeringAiApp</string>
+    <string name="retry">Retry</string>
+    <string name="user_list_activity">Users</string>
+</resources>

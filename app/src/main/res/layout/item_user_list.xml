@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardForegroundColor="@android:color/transparent"
+    app:cardUseCompatPadding="false"
+    app:contentPadding="@dimen/padd_4dp"
+    app:elevation="@dimen/padd_2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padd_4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUser"
+            android:layout_width="@dimen/padd_60dp"
+            android:layout_height="@dimen/padd_60dp"
+            android:layout_marginStart="@dimen/padd_8dp"
+            app:layout_constraintStart_toEndOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padd_8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivUser"
+            app:layout_constraintTop_toTopOf="@+id/ivUser"
+            app:layout_constraintBottom_toBottomOf="@+id/ivUser"
+            tools:text="@tools:sample/lorem"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImageList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padd_4dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_user_image_list"
+            tools:spanCount="2"
+            tools:layoutManager="GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/ivUser"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
